@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background: url(image/backgraung.jpg); }
+    </style>
+    <title>Sign in</title>
+
+</head>
+<body>
+
+<div id="NO-sing-in">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a href="#"><img class="nav-logo" src="image/logo_top.jpg"></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="photo-illusion-logo"  class="nav-link" onclick="window.pageChoose ('fotozone',false)" href="#"> Photo Illusion</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item">
+                    <a id="fotoroom-buttom" class="nav-link" aria-current="page" onclick="window.pageChoose ('fotozone',false)" href="#">FotoRooms</a>
+                </li>
+                <li class="nav-item">
+                    <a id="about-buttom" class="nav-link" onclick="window.pageChoose('about-site',false)" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a id="signinregistr-buttom" class="nav-link shown-is-registered" onclick="window.pageChoose ('sign-in',false)" href="#"> Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div id="YES-sing-in">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a href="#"><img class="nav-logo" src="image/logo_top.jpg"></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="photo-illusion-logo"  class="nav-link" onclick="window.pageChoose('fotozone',true)" href="#"> Photo Illusion</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item">
+                    <a id="fotoroom-buttom" class="nav-link" aria-current="page" onclick="window.pageChoose('fotozone',true)" href="#">FotoRooms</a>
+                </li>
+                <li class="nav-item">
+                    <a id="about-buttom" class="nav-link" onclick="window.pageChoose('about-site',true)" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a id="Me-buttom" class="nav-link" onclick="window.pageProf('profile',true)" href="#"> Me</a>
+                </li>
+                <li class="nav-item">
+                    <a id="signout-buttom" class="nav-link" onclick=" window.contrl('signout',event)" href="#"> Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<div id="sign-in">
+  
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col">
+                <form name="sign-in-form">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Sign in </label>
+                        <input type="email"  name="email"  class="form-control" id="exampleInputEmail1" placeholder="Email" aria-label="Email"  aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" onclick=" window.contrl('Sign_control',event)" class="btn btn-primary">Sign in</button>
+                    <a class="register-link"  onclick="window.pageChoose('registered',false)" href="#"> Create account </a>
+                    <a class="forgot-password" onclick="window.pageChoose('forgot-password-st',false)" href="#"> Forgot password </a> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="forgot-password-st">
+  
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col">
+                <form name="forgot_password_form">
+                    <div class="mb-3">
+                        <label for="InputEmail1" class="form-label"> Input email  </label>
+                        <input type="email" name="email"  class="form-control" id="InputEmail1" placeholder="Email" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">New password</label>
+                        <input type="password" name="new_password" class="form-control" id="new_password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="repeat_password" class="form-label">Repeat password</label>
+                        <input type="password" name="repeat_password" class="form-control" id="repeat_password">
+                    </div>
+                    <button type="submit" onclick="window.contrl('forgot_passord',event)" class="btn btn-primary">Ok</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="Edit">
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-edit">
+                <form name="edit-name">
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" name="name"  class="form-control" id="Name" placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Surname" class="form-label">Surname</label>
+                        <input type="text" name="surname"  class="form-control" id="Surname" placeholder="Surname" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-label="Email"  aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDate">Input date of birth:</label>
+                        <input type="date" name="date" class="form-control" id="inputDate">
+                    </div>
+                    <div class="form-check-inline">
+                        <input name="gender"  class="form-check-input" type="radio"  value="women" id="woman">
+                        <label class="form-check-label" for="woman">
+                            Woman
+                        </label>
+                        <input name="gender" class="form-check-input" type="radio" value="man" id="man" checked>
+                        <label class="form-check-label" for="man">
+                            Man
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="BookDate">Booking date:</label>
+                        <input type="date" name="bookdate" class="form-control" id="BookDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Number</label>
+                        <input type="text" name="number"  class="form-control" id="number" placeholder="380000000000" />
+                    </div>
+                    <button type="submit" onclick="window.contrl('edit_p',event)" class="btn btn-primary ">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div id="about-site">
+
+
+    <div class="container-xxl">
+        <div class="col-about">
+            <div class="row">
+                <div class="about-logo">
+                    <a><img class="logo-about-site" src="image/logo_top.jpg"> </a>
+                    <b class="text-about-name">Photo Illusion</b>
+                </div>
+                <div class="about-logo">
+                    <p class="text-about"> Привіт!
+                        Це Web-додаток що пропонує тобі обрати місце для проведення фотосесії.
+                        Всі фотозали вже підготовлені ні про що турбуватися не потрібно.
+                        Кожна фотозала містить зону для створення макіяжу.
+                        Всі зали мають професійе освітлення та готові прийняти участь у створенні фотографії.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fotozone">
+
+    <div id="carouselExampleCaptions" class="carousel slide slide-zone" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/Room1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption-2  d-md-block image-fotozone">
+                    <h5>650грн/год</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/Room2.jpg" class="d-block w-100 image-fotozone" alt="...">
+                <div class="carousel-caption-2  d-md-block">
+                    <h5>500грн/год</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/Room3.jpg" class="d-block w-100 image-fotozone" alt="...">
+                <div class="carousel-caption-2 d-md-block">
+                    <h5>700грн/год</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div id="profile">
+    <div class="container-xxl">
+        <div class="col-profile">
+            <div class="row" >
+                <table class="table" id="TABLE">                   
+                </table>
+                <a class="Edit"  onclick="window.pageChoose('Edit',true)" href="#"> Edit  </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="registered">
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-registred">
+                <form name="registered-form">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" name="name"  class="form-control" id="exampleInputEmail1" placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-label="Email"  aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword" class="form-label">Password</label>
+                        <input type="password" name="password"  class="form-control" id="InputPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword" class="form-label">Password</label>
+                        <input type="password" name="repeat_password"  class="form-control" id="InputPassword">
+                    </div>
+                    <div class="form-check-inline">
+                        <input name="gender"  class="form-check-input" type="radio"  value="women" id="woman" checked>
+                        <label class="form-check-label" for="woman">
+                            Woman
+                        </label>
+                        <input name="gender" class="form-check-input" type="radio" value="man" id="man" >
+                        <label class="form-check-label" for="man">
+                            Man
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDate">Input date of birth:</label>
+                        <input type="date" name="date" class="form-control" id="inputDate">
+                    </div>
+                    <button type="submit" onclick="window.contrl('registr',event)" class="btn btn-primary ">Registered</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="../js/main.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
+ 
+ 
